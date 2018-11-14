@@ -1,3 +1,74 @@
+fixed bug and can't use 'overwrite:older' mode.
+
+```
+0|www      | 2018-11-13-15:30:08: series error { Error: OOPS: vsf_sysutil_bind
+0|www      |     at makeError (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:1067:13)
+0|www      |     at Parser.<anonymous> (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:113:25)
+0|www      |     at emitTwo (events.js:106:13)
+0|www      |     at Parser.emit (events.js:194:7)
+0|www      |     at Parser._write (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/parser.js:59:10)
+0|www      |     at doWrite (_stream_writable.js:329:12)
+0|www      |     at writeOrBuffer (_stream_writable.js:315:5)
+0|www      |     at Parser.Writable.write (_stream_writable.js:241:11)
+0|www      |     at Socket.ondata (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:273:20)
+0|www      |     at emitOne (events.js:96:13)
+0|www      |     at Socket.emit (events.js:191:7)
+0|www      |     at readableAddChunk (_stream_readable.js:178:18)
+0|www      |     at Socket.Readable.push (_stream_readable.js:136:10)
+0|www      |     at TCP.onread (net.js:561:20) code: 500 }
+0|www      | 2018-11-13-15:30:08: { Error: OOPS: vsf_sysutil_bind
+0|www      |     at makeError (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:1067:13)
+0|www      |     at Parser.<anonymous> (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:113:25)
+0|www      |     at emitTwo (events.js:106:13)
+0|www      |     at Parser.emit (events.js:194:7)
+0|www      |     at Parser._write (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/parser.js:59:10)
+0|www      |     at doWrite (_stream_writable.js:329:12)
+0|www      |     at writeOrBuffer (_stream_writable.js:315:5)
+0|www      |     at Parser.Writable.write (_stream_writable.js:241:11)
+0|www      |     at Socket.ondata (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:273:20)
+0|www      |     at emitOne (events.js:96:13)
+0|www      |     at Socket.emit (events.js:191:7)
+0|www      |     at readableAddChunk (_stream_readable.js:178:18)
+0|www      |     at Socket.Readable.push (_stream_readable.js:136:10)
+0|www      |     at TCP.onread (net.js:561:20) code: 500 }
+0|www      | 2018-11-13-15:30:08: list error
+0|www      | 2018-11-13-15:30:08: [ './upload/8a6ccd358503f72e9a66c23dc07c69e4.zip',
+0|www      |   './upload/eaf9f0115a7ca78e9d0e051f447c713f.zip' ]
+0|www      | 2018-11-13-15:30:08: FILES TO UPLOAD
+0|www      | 2018-11-13-15:30:08: DIRS TO UPLOAD
+0|www      | 2018-11-13-15:30:08: series error { Error: OOPS: priv_sock_get_int
+0|www      |     at makeError (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:1067:13)
+0|www      |     at Parser.<anonymous> (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:113:25)
+0|www      |     at emitTwo (events.js:106:13)
+0|www      |     at Parser.emit (events.js:194:7)
+0|www      |     at Parser._write (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/parser.js:59:10)
+0|www      |     at doWrite (_stream_writable.js:329:12)
+0|www      |     at writeOrBuffer (_stream_writable.js:315:5)
+0|www      |     at Parser.Writable.write (_stream_writable.js:241:11)
+0|www      |     at Socket.ondata (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:273:20)
+0|www      |     at emitOne (events.js:96:13)
+0|www      |     at Socket.emit (events.js:191:7)
+0|www      |     at readableAddChunk (_stream_readable.js:178:18)
+0|www      |     at Socket.Readable.push (_stream_readable.js:136:10)
+0|www      |     at TCP.onread (net.js:561:20) code: 500 }
+0|www      | 2018-11-13-15:30:08: { Error: OOPS: priv_sock_get_int
+0|www      |     at makeError (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:1067:13)
+0|www      |     at Parser.<anonymous> (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:113:25)
+0|www      |     at emitTwo (events.js:106:13)
+0|www      |     at Parser.emit (events.js:194:7)
+0|www      |     at Parser._write (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/parser.js:59:10)
+0|www      |     at doWrite (_stream_writable.js:329:12)
+0|www      |     at writeOrBuffer (_stream_writable.js:315:5)
+0|www      |     at Parser.Writable.write (_stream_writable.js:241:11)
+0|www      |     at Socket.ondata (/opt/web/wuba-rnplatform3/back-end/node_modules/ftp/lib/connection.js:273:20)
+0|www      |     at emitOne (events.js:96:13)
+0|www      |     at Socket.emit (events.js:191:7)
+0|www      |     at readableAddChunk (_stream_readable.js:178:18)
+0|www      |     at Socket.Readable.push (_stream_readable.js:136:10)
+0|www      |     at TCP.onread (net.js:561:20) code: 500 }
+```
+
+
 # Description
 node-ftp-client is a wrapper for the popular FTP client module for [node.js](http://nodejs.org/) - node-ftp, which
 provides an easy way of manipulating FTP transfers.
